@@ -14,13 +14,14 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var aboutMeLabel: UILabel!
     @IBOutlet var fullNameLabel: UILabel!
     
+    @IBOutlet var fullNameV2: UILabel!
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageView.image = UIImage( named: user.person.photo)
-        fullNameLabel.text = user.person.fullName
+        fullNameV2.text = user.person.fullName
         aboutMeLabel.text = user.person.aboutMe
     }
     

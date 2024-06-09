@@ -177,26 +177,36 @@
                                     <segue destination="5MW-yJ-KWD" kind="presentation" id="O9o-am-PbA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fullName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAC-8C-KNW">
+                                <rect key="frame" x="101" y="139" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTf-nd-TR4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="Xss-Dw-WVo" secondAttribute="trailing" constant="77" id="3UR-mH-4PV"/>
+                            <constraint firstItem="jAC-8C-KNW" firstAttribute="top" secondItem="gTf-nd-TR4" secondAttribute="top" constant="83" id="Bk2-SC-6RN"/>
                             <constraint firstItem="s7W-1T-9zH" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="149" id="F5Q-jY-zzR"/>
                             <constraint firstItem="svc-0S-8Eu" firstAttribute="top" secondItem="gTf-nd-TR4" secondAttribute="top" constant="136" id="Ggo-HL-S58"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="bottom" secondItem="Xss-Dw-WVo" secondAttribute="bottom" constant="94" id="IzW-C9-FIZ"/>
                             <constraint firstItem="s7W-1T-9zH" firstAttribute="top" secondItem="svc-0S-8Eu" secondAttribute="bottom" constant="14" id="QhM-bg-Lq4"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="76" id="Sxe-zc-Vul"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="s7W-1T-9zH" secondAttribute="trailing" constant="148" id="SzR-4s-nbb"/>
+                            <constraint firstItem="jAC-8C-KNW" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="101" id="Uaq-64-kqZ"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="top" secondItem="s7W-1T-9zH" secondAttribute="bottom" constant="8" symbolic="YES" id="ZpJ-DO-fdM"/>
                             <constraint firstItem="svc-0S-8Eu" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="16" id="e4O-98-UOl"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="svc-0S-8Eu" secondAttribute="trailing" constant="16" id="ihL-Qo-qKq"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="top" secondItem="svc-0S-8Eu" secondAttribute="bottom" constant="57" id="sF0-IZ-ybD"/>
+                            <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="jAC-8C-KNW" secondAttribute="trailing" constant="100" id="vSq-7R-F6x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jmz-xy-lve"/>
                     <connections>
                         <outlet property="aboutMeLabel" destination="svc-0S-8Eu" id="dHi-db-PJP"/>
+                        <outlet property="fullNameV2" destination="jAC-8C-KNW" id="vfS-wt-vUX"/>
                         <outlet property="imageView" destination="Xss-Dw-WVo" id="QS3-mb-Ak5"/>
                     </connections>
                 </viewController>
