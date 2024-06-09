@@ -13,6 +13,10 @@
 		6C83BA972C16036700A36073 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C83BA962C16036700A36073 /* Base */; };
 		6C83BA992C16036700A36073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C83BA982C16036700A36073 /* Assets.xcassets */; };
 		6C83BA9C2C16036700A36073 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C83BA9B2C16036700A36073 /* Base */; };
+		6C8A79242C160AFB00CD5D32 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A79232C160AFB00CD5D32 /* WelcomeViewController.swift */; };
+		6C8A79262C160B1500CD5D32 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A79252C160B1500CD5D32 /* AboutMeViewController.swift */; };
+		6C8A79282C160B6300CD5D32 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A79272C160B6300CD5D32 /* MoreInfoViewController.swift */; };
+		6C8A792A2C160BA200CD5D32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A79292C160BA200CD5D32 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6C83BA982C16036700A36073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C83BA9B2C16036700A36073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C83BA9D2C16036700A36073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8A79232C160AFB00CD5D32 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6C8A79252C160B1500CD5D32 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		6C8A79272C160B6300CD5D32 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		6C8A79292C160BA200CD5D32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,12 @@
 			children = (
 				6C83BA8F2C16036700A36073 /* AppDelegate.swift */,
 				6C83BA912C16036700A36073 /* SceneDelegate.swift */,
-				6C83BA932C16036700A36073 /* ViewController.swift */,
+				6C8A79292C160BA200CD5D32 /* User.swift */,
 				6C83BA952C16036700A36073 /* Main.storyboard */,
+				6C83BA932C16036700A36073 /* ViewController.swift */,
+				6C8A79232C160AFB00CD5D32 /* WelcomeViewController.swift */,
+				6C8A79252C160B1500CD5D32 /* AboutMeViewController.swift */,
+				6C8A79272C160B6300CD5D32 /* MoreInfoViewController.swift */,
 				6C83BA982C16036700A36073 /* Assets.xcassets */,
 				6C83BA9A2C16036700A36073 /* LaunchScreen.storyboard */,
 				6C83BA9D2C16036700A36073 /* Info.plist */,
@@ -139,8 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C83BA942C16036700A36073 /* ViewController.swift in Sources */,
+				6C8A79262C160B1500CD5D32 /* AboutMeViewController.swift in Sources */,
+				6C8A79242C160AFB00CD5D32 /* WelcomeViewController.swift in Sources */,
+				6C8A79282C160B6300CD5D32 /* MoreInfoViewController.swift in Sources */,
 				6C83BA902C16036700A36073 /* AppDelegate.swift in Sources */,
 				6C83BA922C16036700A36073 /* SceneDelegate.swift in Sources */,
+				6C8A792A2C160BA200CD5D32 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,9 +323,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Swiftbook.LogInApp-V3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +355,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Swiftbook.LogInApp-V3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
