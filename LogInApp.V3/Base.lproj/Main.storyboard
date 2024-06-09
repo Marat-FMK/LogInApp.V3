@@ -101,6 +101,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="log out">
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="sa8-e4-zaY" kind="unwind" unwindAction="unwindFor:" id="7Bm-rW-Fzc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1h-q9-kiq">
                                 <rect key="frame" x="16" y="95" width="361" height="30"/>
@@ -136,6 +139,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rq-n0-zgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sa8-e4-zaY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1689.3129770992366" y="-2.1126760563380285"/>
         </scene>
@@ -153,12 +157,6 @@
                                     <constraint firstAttribute="width" constant="361" id="MED-xd-o8f"/>
                                     <constraint firstAttribute="height" constant="326" id="Ubq-hI-vSL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-D1-Pk0">
-                                <rect key="frame" x="16" y="99" width="361" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,17 +182,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="Xss-Dw-WVo" secondAttribute="trailing" constant="77" id="3UR-mH-4PV"/>
-                            <constraint firstItem="09Z-D1-Pk0" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="16" id="6UQ-i5-CAs"/>
                             <constraint firstItem="s7W-1T-9zH" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="149" id="F5Q-jY-zzR"/>
+                            <constraint firstItem="svc-0S-8Eu" firstAttribute="top" secondItem="gTf-nd-TR4" secondAttribute="top" constant="136" id="Ggo-HL-S58"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="bottom" secondItem="Xss-Dw-WVo" secondAttribute="bottom" constant="94" id="IzW-C9-FIZ"/>
-                            <constraint firstItem="svc-0S-8Eu" firstAttribute="top" secondItem="09Z-D1-Pk0" secondAttribute="bottom" constant="72.670000000000002" id="NCa-aV-2GM"/>
                             <constraint firstItem="s7W-1T-9zH" firstAttribute="top" secondItem="svc-0S-8Eu" secondAttribute="bottom" constant="14" id="QhM-bg-Lq4"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="76" id="Sxe-zc-Vul"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="s7W-1T-9zH" secondAttribute="trailing" constant="148" id="SzR-4s-nbb"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="top" secondItem="s7W-1T-9zH" secondAttribute="bottom" constant="8" symbolic="YES" id="ZpJ-DO-fdM"/>
                             <constraint firstItem="svc-0S-8Eu" firstAttribute="leading" secondItem="gTf-nd-TR4" secondAttribute="leading" constant="16" id="e4O-98-UOl"/>
-                            <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="09Z-D1-Pk0" secondAttribute="trailing" constant="16" id="hov-zb-pQE"/>
-                            <constraint firstItem="09Z-D1-Pk0" firstAttribute="top" secondItem="gTf-nd-TR4" secondAttribute="top" constant="43" id="iY9-Ww-rNO"/>
                             <constraint firstItem="gTf-nd-TR4" firstAttribute="trailing" secondItem="svc-0S-8Eu" secondAttribute="trailing" constant="16" id="ihL-Qo-qKq"/>
                             <constraint firstItem="Xss-Dw-WVo" firstAttribute="top" secondItem="svc-0S-8Eu" secondAttribute="bottom" constant="57" id="sF0-IZ-ybD"/>
                         </constraints>
@@ -202,7 +197,6 @@
                     <navigationItem key="navigationItem" id="Jmz-xy-lve"/>
                     <connections>
                         <outlet property="aboutMeLabel" destination="svc-0S-8Eu" id="dHi-db-PJP"/>
-                        <outlet property="fullNameLabel" destination="09Z-D1-Pk0" id="4Ek-l2-G7g"/>
                         <outlet property="imageView" destination="Xss-Dw-WVo" id="QS3-mb-Ak5"/>
                     </connections>
                 </viewController>
@@ -253,6 +247,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBP-7m-T0L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="compactAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

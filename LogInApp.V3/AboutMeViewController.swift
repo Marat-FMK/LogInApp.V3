@@ -14,11 +14,14 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var aboutMeLabel: UILabel!
     @IBOutlet var fullNameLabel: UILabel!
     
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        imageView.image = UIImage( named: user.person.photo)
+        fullNameLabel.text = user.person.fullName
+        aboutMeLabel.text = user.person.aboutMe
     }
     
     @IBAction func moreInfoButtonPressed() {

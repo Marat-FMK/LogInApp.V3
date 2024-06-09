@@ -13,7 +13,7 @@ struct User {
     let person: Person
     
     static func getUser() -> User {
-        User(login: "", password: "", person: Person(name: "Marat", surname: "_FMK", hobby: "mini cooper r 53", aboutMe: "i love programming, it s  very interesting") )
+        User(login: "", password: "", person: Person.getPerson() )
     }
 }
     
@@ -22,13 +22,14 @@ struct User {
         let surname: String
         let hobby: String
         let aboutMe: String
+        let photo: String
         
         var fullName: String {
             "\(name) \(surname)"
         }
         
         static func getPerson() -> Person {
-            Person (name: "Marat", surname: "_Fmk, height", hobby: "mini cooper r 53. car models and nature", aboutMe: "i love programming , its very interesting!")
+            Person (name: "Marat", surname: "_Fmk", hobby: "mini cooper r 53. car models and nature", aboutMe: "i love programming , its very interesting!", photo: "photo")
         }
     }
 
