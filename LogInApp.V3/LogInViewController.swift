@@ -9,11 +9,24 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet var UserPasswordLabel: UITextField!
+    @IBOutlet var UserLoginLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
 
-
+    @IBAction func logInButtonPressed() {
+    }
+    
+   
+    @IBAction func forgotPasswordButtonPressed() {
+    }
+    
+    @IBAction func forgotNameButtonPressed() {
+    }
+    
+    
+    
 }
 

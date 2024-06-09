@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogInApp_V3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="LogInApp_V3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,7 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdf-dw-ndd"/>
                                     <segue destination="gOu-kK-bGN" kind="presentation" id="yym-tv-3mR"/>
                                 </connections>
                             </button>
@@ -41,11 +42,17 @@
                                 <rect key="frame" x="16" y="541" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="forgot name"/>
+                                <connections>
+                                    <action selector="forgotNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Nb-vp-toW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-xF-ZSt">
                                 <rect key="frame" x="229" y="541" width="148" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="forgot password"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Vu-nB-PbK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +75,10 @@
                             <constraint firstItem="2ag-1q-rsm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wua-RQ-iuv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="UserLoginLabel" destination="2we-FK-Ns6" id="mU1-9b-Dfd"/>
+                        <outlet property="UserPasswordLabel" destination="pyi-M7-sGf" id="jqo-0q-tUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,13 +87,16 @@
         <!--welcome-->
         <scene sceneID="uEr-G5-pBE">
             <objects>
-                <viewController id="488-LE-y2l" sceneMemberID="viewController">
+                <viewController id="488-LE-y2l" customClass="WelcomeViewController" customModule="LogInApp_V3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z3b-6o-uoU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-bm-UDv">
                                 <rect key="frame" x="158" y="658" width="77" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="HMj-5d-6x6"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="log out">
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
@@ -117,15 +131,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="welcome" image="homekit" catalog="system" selectedImage="homekit" id="ONv-BV-NJ3"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="l1h-q9-kiq" id="2ag-Fn-NFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rq-n0-zgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689.3129770992366" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--About Me View Controller-->
         <scene sceneID="sKK-h2-bW0">
             <objects>
-                <viewController id="U8P-hO-nqW" sceneMemberID="viewController">
+                <viewController id="U8P-hO-nqW" customClass="AboutMeViewController" customModule="LogInApp_V3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2HC-Wz-KXJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,12 +169,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7W-1T-9zH">
                                 <rect key="frame" x="149" y="532" width="96" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="Fmt-Uo-w30"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="Fmt-Uo-w30"/>
                                     <constraint firstAttribute="height" constant="35" id="Icb-si-vL6"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="More info"/>
                                 <connections>
+                                    <action selector="moreInfoButtonPressed" destination="U8P-hO-nqW" eventType="touchUpInside" id="Cuo-Yv-XsT"/>
                                     <segue destination="5MW-yJ-KWD" kind="presentation" id="O9o-am-PbA"/>
                                 </connections>
                             </button>
@@ -182,15 +200,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jmz-xy-lve"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="svc-0S-8Eu" id="dHi-db-PJP"/>
+                        <outlet property="fullNameLabel" destination="09Z-D1-Pk0" id="4Ek-l2-G7g"/>
+                        <outlet property="imageView" destination="Xss-Dw-WVo" id="QS3-mb-Ak5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJ6-Um-q3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3396.1832061068699" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--More Info View Controller-->
         <scene sceneID="X6o-Bd-oWW">
             <objects>
-                <viewController id="5MW-yJ-KWD" sceneMemberID="viewController">
+                <viewController id="5MW-yJ-KWD" customClass="MoreInfoViewController" customModule="LogInApp_V3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dab-R6-aAY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

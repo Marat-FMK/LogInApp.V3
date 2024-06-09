@@ -9,6 +9,9 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var fullNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
